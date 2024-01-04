@@ -416,12 +416,13 @@
         crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $(".mob-icon a").click(function () {
-                $(".navigation-mob").toggle();
+            $(".mob-icon a").click(function (e) {
+                e.preventDefault(); // Prevent the default link behavior
+                $(".navigation-mob").toggleClass("open");
             });
 
             $(".navigation-mob .d-flex").click(function () {
-                $(".navigation-mob").hide();
+                $(".navigation-mob").removeClass("open");
             });
         });
     </script>

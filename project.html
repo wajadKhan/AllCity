@@ -108,8 +108,8 @@
 
             <div class="container">
                 <main class="text-center">
-                    <h1 class="heading playfair text-white">
-                        Welcome to All City Assets, Your Trusted Multifamily Investment Partner
+                    <h1 class="heading2 playfair text-white">
+                        EXCITING INVESTMENT <br> OPPORTUNITIES!!!
                     </h1>
                 </main>
             </div>
@@ -311,12 +311,13 @@
         crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $(".mob-icon a").click(function () {
-                $(".navigation-mob").toggle();
+            $(".mob-icon a").click(function (e) {
+                e.preventDefault(); // Prevent the default link behavior
+                $(".navigation-mob").toggleClass("open");
             });
 
             $(".navigation-mob .d-flex").click(function () {
-                $(".navigation-mob").hide();
+                $(".navigation-mob").removeClass("open");
             });
         });
     </script>

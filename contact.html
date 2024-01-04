@@ -180,7 +180,7 @@
                     <textarea role="textbox" style="width: 100%;" aria-multiline="true" rows="6"
                         aria-label="I'm interested in" data-ux="InputTextArea" placeholder="I'm interested in"
                         data-aid="I'm interested in" data-typography="InputAlpha"
-                        class="x-el x-el-textarea c2-1 c2-2 c2-1r c2-1s c2-1t c2-1u c2-1v c2-1w c2-1x c2-1y c2-1z c2-2m c2-2n c2-22 c2-23 c2-2o c2-3 c2-24 c2-4 c2-1k c2-25 c2-26 c2-27 c2-2e c2-2f c2-5 c2-6 c2-7 c2-8"></textarea>
+                        class="x-el x-el-textarea c2-36 c2-1 c2-2 c2-1r c2-1s c2-1t c2-1u c2-1v c2-1w c2-1x c2-1y c2-1z c2-2m c2-2n c2-22 c2-23 c2-2o c2-3 c2-24 c2-4 c2-1k c2-25 c2-26 c2-27 c2-2e c2-2f c2-5 c2-6 c2-7 c2-8"></textarea>
                 </div>
                 <div class="mb-3">
                     <textarea role="textbox" style="width: 100%;" aria-multiline="true" rows="6"
@@ -236,17 +236,22 @@
                         caused in connection with syndicated investing. Invest solely at your own risk.
                     </p>
                 </div>
-                <main class="text-center" style="padding-top: 60px;">
-                    <h3 class="c1-5k text-white">
-                        Your Success is Our Success
-                    </h3>
-                    <img src="./assets/images/qt=q_26.webp" alt="">
-                </main>
+
             </div>
         </div>
+
     </section>
 
-
+    <section class="disclaimer-section  mob-border">
+        <div class="container">
+            <main class="text-center ">
+                <h3 class="c1-5k text-white">
+                    Your Success is Our Success
+                </h3>
+                <img src="./assets/images/qt=q_26.webp" alt="">
+            </main>
+        </div>
+    </section>
 
 
     <!-- footer section  -->
@@ -272,12 +277,13 @@
         crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $(".mob-icon a").click(function () {
-                $(".navigation-mob").toggle();
+            $(".mob-icon a").click(function (e) {
+                e.preventDefault(); // Prevent the default link behavior
+                $(".navigation-mob").toggleClass("open");
             });
 
             $(".navigation-mob .d-flex").click(function () {
-                $(".navigation-mob").hide();
+                $(".navigation-mob").removeClass("open");
             });
         });
     </script>
